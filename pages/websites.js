@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import {
   Grid,
   useMediaQuery,
@@ -40,6 +41,11 @@ const Websites = ({ setSelectedIndex, setTabValue }) => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          Stunning Custom Website Design | KSM Development
+        </title>
+      </Head>
       <Grid
         item
         container

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import {
   Grid,
   Typography,
@@ -185,6 +186,9 @@ const Contact = ({ setTabValue }) => {
 
   return (
     <Grid container direction="row">
+      <Head>
+        <title key="title">Contact Us | KSM Development</title>
+      </Head>
       <Grid
         item
         container

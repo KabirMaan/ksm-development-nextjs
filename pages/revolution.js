@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { Grid, makeStyles, Typography, useMediaQuery } from "@material-ui/core";
 import { useTheme } from "@material-ui/styles";
 
@@ -36,6 +37,11 @@ const Revolution = ({ setTabValue }) => {
   };
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          The Revolution - Cutting-Edge Software | KSM Development
+        </title>
+      </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>
         <Typography
           variant="h2"

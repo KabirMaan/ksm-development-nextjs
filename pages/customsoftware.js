@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Lottie from "react-lottie";
 import Link from "../src/Link";
 import { makeStyles, useTheme } from "@material-ui/styles";
@@ -79,6 +80,11 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
   };
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          Custom Software Development and Design - Free Estimate
+        </title>
+      </Head>
       <Grid
         item
         container

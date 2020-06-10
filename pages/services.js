@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { Grid, Typography, Button, useMediaQuery } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/styles";
 import Link from "../src/Link";
@@ -59,9 +60,14 @@ const Services = ({ setTabValue, setSelectedIndex }) => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
+
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          Top Custom Software Development Services | KSM Development
+        </title>
+      </Head>
       <Grid
         item
         style={{

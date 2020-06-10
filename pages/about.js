@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import {
   makeStyles,
   Grid,
@@ -49,6 +50,9 @@ const About = ({ setTabValue }) => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">About Us - History & Team | KSM Development</title>
+      </Head>
       <Grid
         item
         className={classes.rowContainer}

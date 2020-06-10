@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import axios from "axios";
 import Lottie from "react-lottie";
 import { cloneDeep } from "lodash";
@@ -818,6 +819,9 @@ export default function Estimate() {
 
   return (
     <Grid container direction="row">
+       <Head>
+        <title key="title">Free Custom Software Estimate | KSM Development</title>
+      </Head>
       <Grid
         item
         container

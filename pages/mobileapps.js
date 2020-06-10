@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import {
   Grid,
   useMediaQuery,
@@ -48,6 +49,11 @@ const MobileApps = ({ setSelectedIndex, setTabValue }) => {
   };
   return (
     <Grid container direction="column">
+      <Head>
+        <title key="title">
+          iOS and Android App Design and Development
+        </title>
+      </Head>
       <Grid
         item
         container

@@ -156,6 +156,11 @@ const LandingPage = ({ setTabValue, setSelectedIndex }) => {
   };
   return (
     <Grid container direction="column" className={classes.mainContainer}>
+      <Head>
+        <title key="title">
+          Custom Software, Mobile Apps and Websites KSM Development
+        </title>
+      </Head>
       {/*-----Hero Block-----*/}
       <Grid item>
         <Grid container justify="flex-end" alignItems="center" direction="row">
