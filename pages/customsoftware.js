@@ -186,7 +186,7 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
             <Typography variant="h4">Save Energy</Typography>
           </Grid>
           <Grid item>
-            <img src="/assets/lightbulb.svg" alt="lightbulb" />
+            <img src="/assets/bulb.svg" alt="lightbulb" />
           </Grid>
         </Grid>
         <Grid
@@ -324,7 +324,7 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
         <Grid item container direction="column" alignItems="center">
           <Grid item>
             <img
-              src="/assets/roots.svg"
+              src="/assets/root.svg"
               alt="tree"
               height={matchesSM ? "300em" : "450em"}
               width={matchesSM ? "300em" : "450em"}

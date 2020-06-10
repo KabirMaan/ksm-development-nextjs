@@ -14,6 +14,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Hidden,
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/styles";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -197,7 +198,9 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
           }
           break;
         case "/estimate":
-          setTabValue(5);
+          if (tabValue !== 5) {
+            setTabValue(5);
+          }
           break;
         default:
           break;
@@ -364,7 +367,13 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
                 alt="company logo"
               />
             </Button>
-            {lessThanMediumScreen ? drawer : tabs}
+            <Hidden mdDown>
+              {tabs}
+            </Hidden>
+            <Hidden lgUp>
+              {drawer}
+            </Hidden>
+            {/* {lessThanMediumScreen ? drawer : tabs} */}
           </Toolbar>
         </AppBar>
       </ElevationScroll>

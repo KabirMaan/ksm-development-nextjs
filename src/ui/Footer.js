@@ -136,7 +136,7 @@ const Footer = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/revolution"
+                href="/revolution"
                 onClick={() => setTabValue(2)}
               >
                 Vision

@@ -947,7 +947,7 @@ export default function Estimate() {
               <img
                 src={
                   backButtonDisabled()
-                    ? "/assets/backArroDisabled.svg"
+                    ? "/assets/backArrowDisabled.svg"
                     : "/assets/backArrow.svg"
                 }
                 alt="Previous question"
@@ -962,7 +962,7 @@ export default function Estimate() {
               <img
                 src={
                   forwardButtonDisabled()
-                    ? "/assets/forwardArrowDiasbled.svg"
+                    ? "/assets/forwardArrowDisabled.svg"
                     : "/assets/forwardArrow.svg"
                 }
                 alt="Next question"

@@ -157,7 +157,7 @@ const Services = ({ setTabValue, setSelectedIndex }) => {
           <Grid item>
             <img
               alt="custom software icon"
-              src="/assets/customSoftwareIcon.svg"
+              src="/assets/customSoftware.svg"
               className={classes.icon}
             />
           </Grid>
