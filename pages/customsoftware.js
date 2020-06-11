@@ -84,6 +84,26 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
         <title key="title">
           Custom Software Development and Design - Free Estimate
         </title>
+        <meta
+          name="description"
+          key="description"
+          content="Cutting-edge custom software development with gorgeous designs from scratch - let us optimize your business, solving problems instead of creating new ones."
+        />
+        <meta
+          property="og:title"
+          content="Expert Software Develoment| Custom Software Development"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="maansoftware.com/customsoftware"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="maansoftware.com/customsoftware"
+        />
       </Head>
       <Grid
         item
@@ -112,7 +132,7 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
 
         <Grid item container direction="column" className={classes.heading}>
           <Grid item>
-            <Typography variant="h2" align={matchesMD ? "center" : undefined}>
+            <Typography variant="h1" align={matchesMD ? "center" : undefined}>
               Custom Software Development
             </Typography>
           </Grid>

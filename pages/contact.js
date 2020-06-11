@@ -188,7 +188,28 @@ const Contact = ({ setTabValue }) => {
     <Grid container direction="row">
       <Head>
         <title key="title">Contact Us | KSM Development</title>
+        <meta
+          name="description"
+          key="description"
+          content="Let us guide you through the custom software design and development process. Send us a message with any of your ideas or questions to get started!"
+        />
+        <meta
+          property="og:title"
+          content="Expert Software Development | Contact Us"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="maansoftware.com/contact"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://maansoftware.com/contact.js"
+        />
       </Head>
+
       <Grid
         item
         container
@@ -206,7 +227,7 @@ const Contact = ({ setTabValue }) => {
           <Grid container direction="column">
             <Grid item>
               <Typography
-                variant="h2"
+                variant="h1"
                 align={matchesMD ? "center" : undefined}
                 style={{ lineHeight: 1 }}
               >
@@ -471,7 +492,7 @@ const Contact = ({ setTabValue }) => {
         >
           <Grid container direction="column">
             <Grid item>
-              <Typography variant="h2" align={matchesMD ? "center" : undefined}>
+              <Typography variant="h1" align={matchesMD ? "center" : undefined}>
                 Simple Software.
                 <br />
                 Revolutionary Results.

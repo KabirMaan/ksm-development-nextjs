@@ -52,13 +52,25 @@ const About = ({ setTabValue }) => {
     <Grid container direction="column">
       <Head>
         <title key="title">About Us - History & Team | KSM Development</title>
+        <meta
+          name="description"
+          key="description"
+          content="We provide fast, modern, affordable, and aesthetic software design and development services. Get a free online estimate now!"
+        />{" "}
+        <meta
+          property="og:title"
+          content="Expert Software Development | About Us"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="maansoftware.com/about" />
+        <link rel="canonical" key="canonical" href="maansoftware.com/about" />
       </Head>
       <Grid
         item
         className={classes.rowContainer}
         style={{ marginTop: matchesMD ? "1em" : "2em" }}
       >
-        <Typography variant="h2" align={matchesMD ? "center" : undefined}>
+        <Typography variant="h1" align={matchesMD ? "center" : undefined}>
           About Us
         </Typography>
       </Grid>

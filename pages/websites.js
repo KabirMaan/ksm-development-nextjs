@@ -45,6 +45,26 @@ const Websites = ({ setSelectedIndex, setTabValue }) => {
         <title key="title">
           Stunning Custom Website Design | KSM Development
         </title>
+        <meta
+          name="description"
+          key="description"
+          content="Completely custom designed and built from scratch to be blazing fast. Optimized code, server-side rendering, and perfect responsive design | 99% PageSpeed Score"
+        />
+        <meta
+          property="og:title"
+          content="Expert Software Development | Websites"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="maansoftware.com/websites"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="maansoftware.com/websites"
+        />
       </Head>
       <Grid
         item
@@ -76,7 +96,7 @@ const Websites = ({ setSelectedIndex, setTabValue }) => {
 
         <Grid item container direction="column" className={classes.heading}>
           <Grid item>
-            <Typography variant="h2" align={matchesMD ? "center" : undefined}>
+            <Typography variant="h1" align={matchesMD ? "center" : undefined}>
               Website Development
             </Typography>
           </Grid>

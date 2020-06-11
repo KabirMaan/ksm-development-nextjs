@@ -41,10 +41,30 @@ const Revolution = ({ setTabValue }) => {
         <title key="title">
           The Revolution - Cutting-Edge Software | KSM Development
         </title>
+        <meta
+          name="description"
+          key="description"
+          content="Visionary insights, coupled with cutting-edge technology, is a recipe for revolution. Get a free online estimate instantly!"
+        />
+        <meta
+          property="og:title"
+          content="Expert Software Development | The Revolution"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="maansoftware.com/revolution"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="maansoftware.com/revolution"
+        />
       </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>
         <Typography
-          variant="h2"
+          variant="h1"
           align={matchesMD ? "center" : undefined}
           style={{ fontFamily: "Pacifico" }}
         >

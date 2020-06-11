@@ -67,6 +67,26 @@ const Services = ({ setTabValue, setSelectedIndex }) => {
         <title key="title">
           Top Custom Software Development Services | KSM Development
         </title>
+        <meta
+          name="description"
+          key="description"
+          content="Cutting-edge software, mobile app, and website development services with sleek custom designs - get a free online estimate instantly!"
+        />
+        <meta
+          property="og:title"
+          content="Expert Software Development | Services"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="maansoftware.com/services"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="maansoftware.com/services"
+        />
       </Head>
       <Grid
         item
@@ -76,7 +96,7 @@ const Services = ({ setTabValue, setSelectedIndex }) => {
         }}
       >
         <Typography
-          variant="h2"
+          variant="h1"
           gutterBottom
           align={matchesSM ? "center" : undefined}
         >

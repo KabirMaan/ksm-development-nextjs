@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Lottie from "react-lottie";
 import Link from "../src/Link";
 import { makeStyles, useTheme } from "@material-ui/styles";
@@ -160,12 +161,24 @@ const LandingPage = ({ setTabValue, setSelectedIndex }) => {
         <title key="title">
           Custom Software, Mobile Apps and Websites KSM Development
         </title>
+        <meta
+          name="description"
+          key="description"
+          content="Pristine software custom-designed from the ground up with cutting-edge optimizations. Use our free estimate calculator to check your project cost!"
+        />
+        <meta
+          property="og:title"
+          content="Expert Software Development | KSM Development"
+          key="og:title"
+        />
+        <meta property="og:url" key="og:url" content="maansoftware.com" />
+        <link rel="canonical" key="canonical" href="maansoftware.com" />
       </Head>
       {/*-----Hero Block-----*/}
       <Grid item>
         <Grid container justify="flex-end" alignItems="center" direction="row">
           <Grid item sm className={classes.heroTextContainer}>
-            <Typography align="center" variant="h2">
+            <Typography align="center" variant="h1">
               Expert Software Development
             </Typography>
             <Grid
@@ -391,7 +404,7 @@ const LandingPage = ({ setTabValue, setSelectedIndex }) => {
                 direction="column"
                 style={{ marginBottom: matchesXS ? "10em" : 0 }}
               >
-                <Typography variant="h2" style={{ color: "white" }}>
+                <Typography variant="h1" style={{ color: "white" }}>
                   About Us
                 </Typography>
                 <Typography variant="subtitle2">Lets get personal.</Typography>
@@ -420,7 +433,7 @@ const LandingPage = ({ setTabValue, setSelectedIndex }) => {
               }}
             >
               <Grid container direction="column">
-                <Typography variant="h2" style={{ color: "white" }}>
+                <Typography variant="h1" style={{ color: "white" }}>
                   Contact Us
                 </Typography>
                 <Typography variant="subtitle2">

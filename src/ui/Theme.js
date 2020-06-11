@@ -33,7 +33,7 @@ const theme = createMuiTheme({
       textTransform: "none",
       color: "white",
     },
-    h2: {
+    h1: {
       fontFamily: "Raleway",
       fontWeight: 700,
       fontSize: "2.5rem",

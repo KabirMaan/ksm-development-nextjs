@@ -50,9 +50,27 @@ const MobileApps = ({ setSelectedIndex, setTabValue }) => {
   return (
     <Grid container direction="column">
       <Head>
-        <title key="title">
-          iOS and Android App Design and Development
-        </title>
+        <title key="title">iOS and Android App Design and Development</title>
+        <meta
+          name="description"
+          key="description"
+          content="Mobile Apps Made Easy | Our cutting-edge mobile app development process lets us build beautifully designed, carefully crafted apps for both iOS and Android."
+        />
+        <meta
+          property="og:title"
+          content="Expert Software Development | iOS/Android App Development"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="maansoftware.com/mobileapps"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="maansoftware.com/mobileapps"
+        />
       </Head>
       <Grid
         item
@@ -84,7 +102,7 @@ const MobileApps = ({ setSelectedIndex, setTabValue }) => {
 
         <Grid item container direction="column" className={classes.heading}>
           <Grid item>
-            <Typography variant="h2" align={matchesMD ? "center" : undefined}>
+            <Typography variant="h1" align={matchesMD ? "center" : undefined}>
               iOS/Android App Development
             </Typography>
           </Grid>
