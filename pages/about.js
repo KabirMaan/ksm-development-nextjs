@@ -51,7 +51,7 @@ const About = ({ setTabValue }) => {
   return (
     <Grid container direction="column">
       <Head>
-        <title key="title">About Us - History & Team | KSM Development</title>
+        <title key="title">About Us - History & Team | Maan Development</title>
         <meta
           name="description"
           key="description"
@@ -88,7 +88,7 @@ const About = ({ setTabValue }) => {
         >
           Whether it be person to person, business to consumer, or an individual
           to their interests, technology is meant to bring us closer to what we
-          care about in the best way possible. KSM Development will use that
+          care about in the best way possible. Maan Development will use that
           principle to provide fast, modern, inexpensive, and aesthetic
           software.
         </Typography>

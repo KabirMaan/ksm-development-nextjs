@@ -65,7 +65,7 @@ const Services = ({ setTabValue, setSelectedIndex }) => {
     <Grid container direction="column">
       <Head>
         <title key="title">
-          Top Custom Software Development Services | KSM Development
+          Top Custom Software Development Services | Maan Development
         </title>
         <meta
           name="description"

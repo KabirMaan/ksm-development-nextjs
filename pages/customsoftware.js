@@ -143,7 +143,7 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
               align={matchesMD ? "center" : undefined}
             >
               Whether we're replacing old software or inventing new solutions,
-              KSM Development is here to help your business tackle technology.
+              Maan Development is here to help your business tackle technology.
             </Typography>
             <Typography
               variant="body1"
@@ -243,7 +243,7 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
           style={{ maxWidth: "40em" }}
         >
           <Grid item>
-            <Typography variant="h4">Save </Typography>
+            <Typography variant="h4">Save Money</Typography>
           </Grid>
           <Grid item>
             <img src="/assets/cash.svg" alt="cash" />
@@ -256,7 +256,8 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
         className={classes.rowContainer}
         direction={matchesMD ? "column" : "row"}
         alignItems={matchesMD ? "center" : undefined}
-        justify="space-between"
+        justify={matchesMD ? "center" : "space-between"}
+        style={{ display: matchesMD ? "grid" : undefined }}
       >
         <Grid
           item
@@ -375,10 +376,13 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
         item
         container
         className={classes.rowContainer}
-        justify="space-between"
+        justify={matchesMD ? "center" : "space-between"}
         direction={matchesMD ? "column" : "row"}
         alignItems={matchesMD ? "center" : undefined}
-        style={{ marginBottom: "20em" }}
+        style={{
+          marginBottom: "20em",
+          display: matchesMD ? "grid" : undefined,
+        }}
       >
         <Grid
           item

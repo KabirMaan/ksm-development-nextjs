@@ -187,7 +187,7 @@ const Contact = ({ setTabValue }) => {
   return (
     <Grid container direction="row">
       <Head>
-        <title key="title">Contact Us | KSM Development</title>
+        <title key="title">Contact Us | Maan Development</title>
         <meta
           name="description"
           key="description"

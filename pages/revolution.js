@@ -39,7 +39,7 @@ const Revolution = ({ setTabValue }) => {
     <Grid container direction="column">
       <Head>
         <title key="title">
-          The Revolution - Cutting-Edge Software | KSM Development
+          The Revolution - Cutting-Edge Software | Maan Development
         </title>
         <meta
           name="description"
@@ -460,6 +460,7 @@ const Revolution = ({ setTabValue }) => {
             src="/assets/reviewIcon.svg"
             alt="magnifying glass"
             width="100%"
+            style={{ maxWidth: "40em" }}
           />
         </Grid>
       </Grid>
@@ -572,6 +573,7 @@ const Revolution = ({ setTabValue }) => {
             src="/assets/reviewIcon.svg"
             alt="magnifying glass"
             width="100%"
+            style={{ maxWidth: "40em" }}
           />
         </Grid>
       </Grid>

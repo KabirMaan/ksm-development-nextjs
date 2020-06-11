@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
   socialContainer: {
     position: "absolute",
     marginTop: "-6em",
+    bottom: 0,
     right: "1.5em",
     [theme.breakpoints.down("xs")]: {
       right: "0.6em",
@@ -50,14 +51,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Footer = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
+const Footer = ({ setSelectedIndex, setTabValue }) => {
   const classes = useStyles();
   return (
     <footer className={classes.footer}>
       <Hidden mdDown>
         <Grid container justify="center" className={classes.mainContainer}>
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid
+              container
+              direction="column"
+              spacing={2}
+              style={{ margin: 0 }}
+            >
               <Grid
                 item
                 className={classes.link}
@@ -70,7 +76,12 @@ const Footer = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
             </Grid>
           </Grid>
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid
+              container
+              direction="column"
+              spacing={2}
+              style={{ margin: 0 }}
+            >
               <Grid
                 item
                 className={classes.link}
@@ -122,7 +133,12 @@ const Footer = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
             </Grid>
           </Grid>
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid
+              container
+              direction="column"
+              spacing={2}
+              style={{ margin: 0 }}
+            >
               <Grid
                 item
                 className={classes.link}
@@ -162,7 +178,12 @@ const Footer = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
             </Grid>
           </Grid>
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid
+              container
+              direction="column"
+              spacing={2}
+              style={{ margin: 0 }}
+            >
               <Grid
                 item
                 className={classes.link}
@@ -193,7 +214,12 @@ const Footer = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
             </Grid>
           </Grid>
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid
+              container
+              direction="column"
+              spacing={2}
+              style={{ margin: 0 }}
+            >
               <Grid
                 item
                 className={classes.link}
@@ -207,16 +233,28 @@ const Footer = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
           </Grid>
         </Grid>
       </Hidden>
-      <img
+      <svg
         className={classes.adornment}
-        alt="black decorative slash"
-        src="/assets/footerAdornment.svg"
-      />
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 294.4 180"
+      >
+        <style>{`.st1{fill:#fff}.st2{font-family:&apos;ArialMT&apos;}.st3{font-size:8px}`}</style>
+        <path d="M294.4 0L166.3 227H-4V0z" />
+        <path fill="none" d="M111-24v376" />
+        <text transform="translate(5 175)" class="st1 st2 st3">
+          © Maan Development 2020
+        </text>
+        <text transform="translate(147.442 175)" class="st1 st2 st3">
+          London, UK
+        </text>
+      </svg>
       <Grid
         container
         className={classes.socialContainer}
         justify="flex-end"
         spacing={2}
+        style={{ margin: 0 }}
       >
         <Grid
           item

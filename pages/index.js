@@ -159,7 +159,7 @@ const LandingPage = ({ setTabValue, setSelectedIndex }) => {
     <Grid container direction="column" className={classes.mainContainer}>
       <Head>
         <title key="title">
-          Custom Software, Mobile Apps and Websites KSM Development
+          Custom Software, Mobile Apps and Websites Maan Development
         </title>
         <meta
           name="description"
@@ -168,7 +168,7 @@ const LandingPage = ({ setTabValue, setSelectedIndex }) => {
         />
         <meta
           property="og:title"
-          content="Expert Software Development | KSM Development"
+          content="Expert Software Development | Maan Development"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="maansoftware.com" />

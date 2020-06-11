@@ -43,7 +43,7 @@ const Websites = ({ setSelectedIndex, setTabValue }) => {
     <Grid container direction="column">
       <Head>
         <title key="title">
-          Stunning Custom Website Design | KSM Development
+          Stunning Custom Website Design | Maan Development
         </title>
         <meta
           name="description"
