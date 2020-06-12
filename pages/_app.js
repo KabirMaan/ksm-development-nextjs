@@ -27,9 +27,12 @@ export default class MyApp extends App {
   };
 
   setSelectedIndex = (index) => {
-    this.setState({
-      selectedIndex: index,
-    });
+    this.setState(
+      {
+        selectedIndex: index,
+      },
+      () => console.log(this.state)
+    );
   };
 
   render() {

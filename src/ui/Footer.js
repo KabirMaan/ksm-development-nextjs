@@ -242,10 +242,10 @@ const Footer = ({ setSelectedIndex, setTabValue }) => {
         <style>{`.st1{fill:#fff}.st2{font-family:&apos;ArialMT&apos;}.st3{font-size:8px}`}</style>
         <path d="M294.4 0L166.3 227H-4V0z" />
         <path fill="none" d="M111-24v376" />
-        <text transform="translate(5 175)" class="st1 st2 st3">
+        <text transform="translate(5 175)" className="st1 st2 st3">
           © Maan Development 2020
         </text>
-        <text transform="translate(147.442 175)" class="st1 st2 st3">
+        <text transform="translate(147.442 175)" className="st1 st2 st3">
           London, UK
         </text>
       </svg>

@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
+  console.log(setSelectedIndex, setTabValue);
   const classes = useStyles();
   const theme = useTheme();
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
