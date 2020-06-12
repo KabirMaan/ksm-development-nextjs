@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import Head from "next/head";
 import Lottie from "react-lottie";
 import Link from "../src/Link";
@@ -193,7 +194,13 @@ const LandingPage = ({ setTabValue, setSelectedIndex }) => {
                   className={classes.estimateButton}
                   component={Link}
                   href="/estimate"
-                  onClick={() => setTabValue(5)}
+                  onClick={() => {
+                    setTabValue(5);
+                    ReactGA.event({
+                      category: "Estimate",
+                      action: "Home Page Pressed",
+                    });
+                  }}
                 >
                   Free Estimate
                 </Button>

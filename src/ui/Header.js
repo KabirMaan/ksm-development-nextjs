@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactGA from "react-ga";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
@@ -131,6 +132,7 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
   // const [selectedIndex, setSelectedIndex] = useState(0);
+  const [previousUrl, setPreviousUrl] = useState("");
 
   const handleTabChange = (e, newValue) => {
     setTabValue(newValue);
@@ -189,6 +191,10 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
     { name: "Contact Us", link: "/contact", activeIndex: 4 },
   ];
   useEffect(() => {
+    if (previousUrl !== window.location.pathname) {
+      setPreviousUrl(window.location.pathname);
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
     [...menuOptions, ...routes].forEach((route) => {
       switch (window.location.pathname) {
         case `${route.link}`:
@@ -244,7 +250,13 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
         className={classes.button}
         component={Link}
         href="/estimate"
-        onClick={() => setTabValue(5)}
+        onClick={() => {
+          setTabValue(5);
+          ReactGA.event({
+            category: "Estimate",
+            action: "Desktop Header Pressed",
+          });
+        }}
       >
         Free Estimate
       </Button>
@@ -321,6 +333,10 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
             onClick={() => {
               setOpenDrawer(false);
               setTabValue(5);
+              ReactGA.event({
+                category: "Estimate",
+                action: "Mobile Header Pressed",
+              });
             }}
             divider
             button

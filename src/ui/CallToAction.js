@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import { Grid, Typography, Button, useMediaQuery } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/styles";
 import Link from "../Link";
@@ -100,6 +101,10 @@ const CallToAction = ({ setTabValue }) => {
           href="/estimate"
           onClick={() => {
             setTabValue(5);
+            ReactGA.event({
+              category: "Estimate",
+              action: "Call To Action Pressed",
+            });
           }}
         >
           Free Estimate

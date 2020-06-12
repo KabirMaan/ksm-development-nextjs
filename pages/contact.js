@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactGA from "react-ga";
 import Head from "next/head";
 import {
   Grid,
@@ -138,6 +139,10 @@ const Contact = ({ setTabValue }) => {
 
   const onConfirm = async () => {
     setLoading(true);
+    ReactGA.event({
+      category: "Message",
+      action: "Contact Us Page Send Message Button Pressed",
+    });
     try {
       const response = await axios.get(
         "https://us-central1-ksm-development.cloudfunctions.net/sendMail",
@@ -528,6 +533,10 @@ const Contact = ({ setTabValue }) => {
             href="/estimate"
             onClick={() => {
               setTabValue(5);
+              ReactGA.event({
+                category: "Estimate",
+                action: "Contact Page Pressed",
+              });
             }}
           >
             Free Estimate

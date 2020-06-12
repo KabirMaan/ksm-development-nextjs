@@ -1,10 +1,13 @@
 import React from "react";
 import App from "next/app";
+import ReactGA from 'react-ga'
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import Theme from "../src/ui/Theme";
 import Header from "../src/ui/Header";
 import Footer from "../src/ui/Footer";
+
+ReactGA.initialize("UA-169186579-1")
 
 export default class MyApp extends App {
   state = {
