@@ -16,9 +16,19 @@ import {
   ListItem,
   ListItemText,
   Hidden,
+  Popper,
+  Grow,
+  Paper,
+  ClickAwayListener,
+  MenuList,
+  ExpansionPanel,
+  ExpansionPanelDetails,
+  ExpansionPanelSummary,
+  Grid,
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/styles";
 import MenuIcon from "@material-ui/icons/Menu";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Link from "../Link";
 
 function ElevationScroll(props) {
@@ -84,6 +94,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.blue,
     color: "white",
     borderRadius: "0px",
+    zIndex: 1302,
   },
   menuItem: {
     ...theme.typography.tab,
@@ -115,14 +126,39 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerItemSelected: {
     opacity: 1,
+    
   },
   appBar: {
     zIndex: theme.zIndex.modal + 1,
   },
+  expansion: {
+    backgroundColor: theme.palette.common.blue,
+    borderBottom: "1px solid rgba(0,0,0,0.12)",
+    "&.Mui-expanded": {
+      margin: 0,
+      borderBottom: 0,
+    },
+    "&::before": {
+      backgroundColor: "rgba(0,0,0,0)",
+    },
+  },
+  expansionDetails: {
+    padding: 0,
+    backgroundColor: theme.palette.primary.light,
+  },
+  expansionSummary: {
+    padding: "0 24px 0 16px",
+    backgroundColor: (props) =>
+      props.tabValue === 1 ? "rgba(0,0,0,0.14)" : "inherit",
+
+    "&:hover": {
+      backgroundColor: "rgba(0,0,0,0.8)",
+    },
+  },
 }));
 
 const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
-  const classes = useStyles();
+  const classes = useStyles({ tabValue });
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const lessThanMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -154,25 +190,30 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
     setSelectedIndex(index);
   };
 
+  const handleListKeyDown = (event) => {
+    if (event.key === "Tab") {
+      event.preventDefault();
+      setOpenMenu(false);
+    }
+  };
   const menuOptions = [
-    { name: "Services", link: "/services", activeIndex: 1, selectedIndex: 0 },
     {
       name: "Custom Software Development",
       link: "/customsoftware",
       activeIndex: 1,
-      selectedIndex: 1,
+      selectedIndex: 0,
     },
     {
       name: "iOS/Android App Development",
       link: "/mobileapps",
       activeIndex: 1,
-      selectedIndex: 2,
+      selectedIndex: 1,
     },
     {
       name: "Website Development",
       link: "/websites",
       activeIndex: 1,
-      selectedIndex: 3,
+      selectedIndex: 2,
     },
   ];
 
@@ -241,6 +282,7 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
             aria-owns={route.ariaOwns}
             aria-haspopup={route.ariaPopup}
             onMouseOver={route.mouseOver}
+            onMouseLeave={() => setOpenMenu(false)}
           />
         ))}
       </Tabs>
@@ -260,7 +302,57 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
       >
         Free Estimate
       </Button>
-      <Menu
+      <Popper
+        open={openMenu}
+        anchorEl={anchorEl}
+        role={undefined}
+        transition
+        disablePortal
+        placement="bottom-start"
+      >
+        {({ TransitionProps, placement }) => (
+          <Grow
+            {...TransitionProps}
+            style={{
+              transformOrigin: "top-left",
+            }}
+          >
+            <Paper classes={{ root: classes.menu }} elevation={0}>
+              <ClickAwayListener onClickAway={handleMenuClose}>
+                <MenuList
+                  id="menu-list-grow"
+                  disablePadding
+                  onKeyDown={handleListKeyDown}
+                  onMouseLeave={handleMenuClose}
+                  onMouseOver={() => setOpenMenu(true)}
+                >
+                  {menuOptions.map((option, index) => (
+                    <MenuItem
+                      key={index}
+                      onClick={(e) => {
+                        handleMenuItemClick(e, index);
+                        setTabValue(1);
+                        handleMenuClose();
+                      }}
+                      selected={
+                        index === selectedIndex &&
+                        tabValue === 1 &&
+                        window.location.pathname !== "/services"
+                      }
+                      component={Link}
+                      href={option.link}
+                      classes={{ root: classes.menuItem }}
+                    >
+                      {option.name}
+                    </MenuItem>
+                  ))}
+                </MenuList>
+              </ClickAwayListener>
+            </Paper>
+          </Grow>
+        )}
+      </Popper>
+      {/* <Menu
         id="simple-menu"
         anchorEl={anchorEl}
         open={openMenu}
@@ -287,7 +379,7 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
             {option.name}
           </MenuItem>
         ))}
-      </Menu>
+      </Menu> */}
     </>
   );
 
@@ -303,31 +395,101 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
       >
         <div className={classes.toolbarMargin} />
         <List disablePadding>
-          {routes.map((route, index) => (
-            <ListItem
-              divider
-              key={index}
-              button
-              component={Link}
-              href={route.link}
-              selected={tabValue === route.activeIndex}
-              onClick={() => {
-                setOpenDrawer(false);
-                setTabValue(route.activeIndex);
-              }}
-            >
-              <ListItemText
-                className={
-                  tabValue === route.activeIndex
-                    ? `${classes.drawerItem} ${classes.drawerItemSelected}`
-                    : classes.drawerItem
-                }
-                disableTypography
+          {routes.map((route, index) =>
+            route.name === "Services" ? (
+              <ExpansionPanel
+                elevation={0}
+                classes={{ root: classes.expansion }}
+                key={index}
               >
-                {route.name}
-              </ListItemText>
-            </ListItem>
-          ))}
+                <ExpansionPanelSummary
+                  expandIcon={<ExpandMoreIcon color="secondary" />}
+                  classes={{ root: classes.expansionSummary }}
+                >
+                  <ListItemText
+                    className={classes.drawerItem}
+                    disableTypography
+                    onClick={() => {
+                      setOpenDrawer(false);
+                      setTabValue(route.activeIndex);
+                    }}
+                    style={{ opacity: tabValue === 1 ? 1 : null }}
+                  >
+                    <Link href={route.link} color="inherit">
+                      {route.name}
+                    </Link>
+                  </ListItemText>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails
+                  classes={{ root: classes.expansionDetails }}
+                >
+                  <Grid container direction="column">
+                    {menuOptions.map((route, index) => {
+                      return (
+                        <Grid item key={index}>
+                          <ListItem
+                            divider
+                            key={route.selectedIndex}
+                            button
+                            component={Link}
+                            href={route.link}
+                            selected={
+                              selectedIndex === route.selectedIndex &&
+                              tabValue === 1 &&
+                              window.location.pathname !== "/services"
+                            }
+                            onClick={() => {
+                              setOpenDrawer(false);
+                              setSelectedIndex(route.selectedIndex);
+                            }}
+                            classes={{ selected: classes.drawerItemSelected }}
+                          >
+                            <ListItemText
+                              className={classes.drawerItem}
+                              disableTypography
+                            >
+                              {route.name
+                                .split(" ")
+                                .filter((word) => word !== "Development")
+                                .join("")}
+                              <br />
+                              <span style={{ fontSize: "0.75rem" }}>
+                                Development
+                              </span>
+                            </ListItemText>
+                          </ListItem>
+                        </Grid>
+                      );
+                    })}
+                  </Grid>
+                </ExpansionPanelDetails>
+              </ExpansionPanel>
+            ) : (
+              <ListItem
+                divider
+                key={route.activeIndex}
+                button
+                component={Link}
+                href={route.link}
+                selected={tabValue === route.activeIndex}
+                onClick={() => {
+                  setOpenDrawer(false);
+                  setTabValue(route.activeIndex);
+                }}
+              >
+                <ListItemText
+                  className={
+                    tabValue === route.activeIndex
+                      ? `${classes.drawerItem} ${classes.drawerItemSelected}`
+                      : classes.drawerItem
+                  }
+                  disableTypography
+                >
+                  {route.name}
+                </ListItemText>
+              </ListItem>
+            )
+          )}
 
           <ListItem
             onClick={() => {

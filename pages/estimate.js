@@ -469,10 +469,10 @@ export default function Estimate() {
 
     if (questions.length === 2) {
       if (emptySelections.length === 1) {
-        return false;
+        disabled = false;
       }
     } else if (questions.length === 1) {
-      return true;
+      disabled = true;
     } else {
       if (
         emptySelections.length < 3 &&
@@ -480,7 +480,7 @@ export default function Estimate() {
           (option) => option.selected
         ).length > 0
       ) {
-        return false;
+        disabled = false;
       }
     }
 
