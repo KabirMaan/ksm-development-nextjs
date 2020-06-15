@@ -65,7 +65,7 @@ const Services = ({ setTabValue, setSelectedIndex }) => {
     <Grid container direction="column">
       <Head>
         <title key="title">
-          Top Custom Software Development Services | Maan Development
+          Top Custom Software Development Services | KSM Development
         </title>
         <meta
           name="description"
@@ -80,12 +80,12 @@ const Services = ({ setTabValue, setSelectedIndex }) => {
         <meta
           property="og:url"
           key="og:url"
-          content="maansoftware.com/services"
+          content="ksmdevelopment.com/services"
         />
         <link
           rel="canonical"
           key="canonical"
-          href="maansoftware.com/services"
+          href="ksmdevelopment.com/services"
         />
       </Head>
       <Grid

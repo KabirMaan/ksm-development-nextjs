@@ -49,7 +49,7 @@ const About = ({ setTabValue }) => {
   return (
     <Grid container direction="column">
       <Head>
-        <title key="title">About Us - History & Team | Maan Development</title>
+        <title key="title">About Us - History & Team | KSM Development</title>
         <meta
           name="description"
           key="description"
@@ -60,8 +60,12 @@ const About = ({ setTabValue }) => {
           content="Expert Software Development | About Us"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="maansoftware.com/about" />
-        <link rel="canonical" key="canonical" href="maansoftware.com/about" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="ksmdevelopment.com/about"
+        />
+        <link rel="canonical" key="canonical" href="ksmdevelopment.com/about" />
       </Head>
       <Grid
         item
@@ -86,7 +90,7 @@ const About = ({ setTabValue }) => {
         >
           Whether it be person to person, business to consumer, or an individual
           to their interests, technology is meant to bring us closer to what we
-          care about in the best way possible. Maan Development will use that
+          care about in the best way possible. KSM Development will use that
           principle to provide fast, modern, inexpensive, and aesthetic
           software.
         </Typography>
@@ -178,7 +182,7 @@ const About = ({ setTabValue }) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid
+      {/* <Grid
         item
         container
         direction="column"
@@ -274,7 +278,7 @@ const About = ({ setTabValue }) => {
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
+      </Grid> */}
       <Grid item>
         <CallToAction setTabValue={setTabValue} />
       </Grid>

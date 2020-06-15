@@ -39,7 +39,7 @@ const Revolution = ({ setTabValue }) => {
     <Grid container direction="column">
       <Head>
         <title key="title">
-          The Revolution - Cutting-Edge Software | Maan Development
+          The Revolution - Cutting-Edge Software | KSM Development
         </title>
         <meta
           name="description"
@@ -54,12 +54,12 @@ const Revolution = ({ setTabValue }) => {
         <meta
           property="og:url"
           key="og:url"
-          content="maansoftware.com/revolution"
+          content="ksmdevelopment.com/revolution"
         />
         <link
           rel="canonical"
           key="canonical"
-          href="maansoftware.com/revolution"
+          href="ksmdevelopment.com/revolution"
         />
       </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>

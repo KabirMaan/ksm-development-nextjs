@@ -98,12 +98,12 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
         <meta
           property="og:url"
           key="og:url"
-          content="maansoftware.com/customsoftware"
+          content="ksmdevelopment.com/customsoftware"
         />
         <link
           rel="canonical"
           key="canonical"
-          href="maansoftware.com/customsoftware"
+          href="ksmdevelopment.com/customsoftware"
         />
       </Head>
       <Grid
@@ -144,7 +144,7 @@ const CustomSoftware = ({ setSelectedIndex, setTabValue }) => {
               align={matchesMD ? "center" : undefined}
             >
               Whether we're replacing old software or inventing new solutions,
-              Maan Development is here to help your business tackle technology.
+              KSM Development is here to help your business tackle technology.
             </Typography>
             <Typography
               variant="body1"

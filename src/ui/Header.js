@@ -553,14 +553,14 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
                   className="st1 st2"
                   fontSize="57"
                 >
-                  Maan
+                  KSM
                 </text>
                 <text
                   transform="translate(115 112.015)"
                   className="st1 st2"
                   fontSize="54"
                 >
-                  Software
+                  Development
                 </text>
                 <path
                   className="st0"

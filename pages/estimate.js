@@ -817,7 +817,7 @@ export default function Estimate() {
     <Grid container direction="row">
       <Head>
         <title key="title">
-          Free Custom Software Estimate | Maan Development
+          Free Custom Software Estimate | KSM Development
         </title>
         <meta
           name="description"
@@ -832,12 +832,12 @@ export default function Estimate() {
         <meta
           property="og:url"
           key="og:url"
-          content="maansoftware.com/estimate"
+          content="ksmdevelopment.com/estimate"
         />
         <link
           rel="canonical"
           key="canonical"
-          href="maansoftware.com/estimate"
+          href="ksmdevelopment.com/estimate"
         />
       </Head>
       <Grid

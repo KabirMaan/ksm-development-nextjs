@@ -243,7 +243,7 @@ const Footer = ({ setSelectedIndex, setTabValue }) => {
         <path d="M294.4 0L166.3 227H-4V0z" />
         <path fill="none" d="M111-24v376" />
         <text transform="translate(5 175)" className="st1 st2 st3">
-          © Maan Development 2020
+          © KSM Development 2020
         </text>
         <text transform="translate(147.442 175)" className="st1 st2 st3">
           London, UK

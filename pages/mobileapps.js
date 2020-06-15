@@ -64,12 +64,12 @@ const MobileApps = ({ setSelectedIndex, setTabValue }) => {
         <meta
           property="og:url"
           key="og:url"
-          content="maansoftware.com/mobileapps"
+          content="ksmdevelopment.com/mobileapps"
         />
         <link
           rel="canonical"
           key="canonical"
-          href="maansoftware.com/mobileapps"
+          href="ksmdevelopment.com/mobileapps"
         />
       </Head>
       <Grid

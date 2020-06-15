@@ -185,7 +185,7 @@ const Contact = ({ setTabValue }) => {
   return (
     <Grid container direction="row">
       <Head>
-        <title key="title">Contact Us | Maan Development</title>
+        <title key="title">Contact Us | KSM Development</title>
         <meta
           name="description"
           key="description"
@@ -199,12 +199,12 @@ const Contact = ({ setTabValue }) => {
         <meta
           property="og:url"
           key="og:url"
-          content="maansoftware.com/contact"
+          content="ksmdevelopment.com/contact"
         />
         <link
           rel="canonical"
           key="canonical"
-          href="https://maansoftware.com/contact.js"
+          href="https://ksmdevelopment.com/contact.js"
         />
       </Head>
 
@@ -275,11 +275,10 @@ const Contact = ({ setTabValue }) => {
                   style={{ color: theme.palette.common.blue, fontSize: "1rem" }}
                 >
                   <a
-                    href="mailto:info@kabirmaan.com"
+                    href="mailto:ksmdevelopment1@gmail.com"
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
-                    {" "}
-                    info@kabirmaan.com
+                    ksmdevelopment1@gmail.com
                   </a>
                 </Typography>
               </Grid>
