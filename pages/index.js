@@ -185,7 +185,6 @@ const LandingPage = ({ setTabValue, setSelectedIndex }) => {
             <Grid
               container
               justify="center"
-              // alignItems="center"
               className={classes.buttonContainer}
             >
               <Grid item>

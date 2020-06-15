@@ -45,8 +45,6 @@ const About = ({ setTabValue }) => {
   const classes = useStyles();
   const theme = useTheme();
 
-  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Grid container direction="column">
@@ -197,7 +195,6 @@ const About = ({ setTabValue }) => {
           <Typography variant="body1" paragraph align="center">
             Kabir Maan, Founder
           </Typography>
-          {/* <Typography variant="body1" paragraph align="center"></Typography> */}
         </Grid>
         <Grid item>
           <Avatar

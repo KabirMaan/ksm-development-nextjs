@@ -85,19 +85,12 @@ const Contact = ({ setTabValue }) => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   const [name, setName] = useState("");
-  // const [nameHelper, setNameHelper] = useState("");
-
   const [email, setEmail] = useState("");
   const [emailHelper, setEmailHelper] = useState("");
-
   const [phone, setPhone] = useState("");
   const [phoneHelper, setPhoneHelper] = useState("");
-
   const [message, setMessage] = useState("");
-  // const [messageHelper, setMessageHelper] = useState("");
-
   const [open, setOpen] = useState(false);
-
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState({
     open: false,

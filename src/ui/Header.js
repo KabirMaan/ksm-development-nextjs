@@ -7,7 +7,6 @@ import {
   Tabs,
   Tab,
   Button,
-  Menu,
   MenuItem,
   useMediaQuery,
   SwipeableDrawer,
@@ -126,7 +125,6 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerItemSelected: {
     opacity: 1,
-    
   },
   appBar: {
     zIndex: theme.zIndex.modal + 1,

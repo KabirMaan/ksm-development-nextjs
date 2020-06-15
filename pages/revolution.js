@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import { Grid, makeStyles, Typography, useMediaQuery } from "@material-ui/core";
 import { useTheme } from "@material-ui/styles";
-
 import technologyAnimation from "../src/animations/technologyAnimation/data.json";
 import Lottie from "react-lottie";
 import CallToAction from "../src/ui/CallToAction";

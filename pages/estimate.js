@@ -5,7 +5,6 @@ import axios from "axios";
 import Lottie from "react-lottie";
 import { cloneDeep } from "lodash";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
@@ -379,17 +378,12 @@ export default function Estimate() {
 
   const [questions, setQuestions] = useState(defaultQuestions);
   const [dialogOpen, setDialogOpen] = useState(false);
-
   const [name, setName] = useState("");
-
   const [email, setEmail] = useState("");
   const [emailHelper, setEmailHelper] = useState("");
-
   const [phone, setPhone] = useState("");
   const [phoneHelper, setPhoneHelper] = useState("");
-
   const [message, setMessage] = useState("");
-
   const [total, setTotal] = useState(0);
   const [service, setService] = useState("");
   const [platforms, setPlatforms] = useState([]);
@@ -397,10 +391,8 @@ export default function Estimate() {
   const [customFeatures, setCustomFeatures] = useState("");
   const [users, setUsers] = useState("");
   const [category, setCategory] = useState("");
-
   const [alert, setAlert] = useState({ open: false, color: "" });
   const [alertMessage, setAlertMesssage] = useState("");
-
   const [loading, setLoading] = useState(false);
 
   const defaultOptions = {
