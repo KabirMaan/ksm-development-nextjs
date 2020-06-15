@@ -549,14 +549,14 @@ const Header = ({ selectedIndex, setSelectedIndex, tabValue, setTabValue }) => {
                 <path d="M448.07-1l-9.62 17.24-8.36 14.96L369.93 139H-1V-1z" />
                 <path className="st0" d="M-1 139h479.92v.01H-1z" />
                 <text
-                  transform="translate(190 65.233)"
+                  transform="translate(230 65.233)"
                   className="st1 st2"
                   fontSize="57"
                 >
                   KSM
                 </text>
                 <text
-                  transform="translate(115 112.015)"
+                  transform="translate(17.692 112.015)"
                   className="st1 st2"
                   fontSize="54"
                 >
