@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Grid, makeStyles, Typography, useMediaQuery } from "@material-ui/core";
 import { useTheme } from "@material-ui/styles";
 import technologyAnimation from "../src/animations/technologyAnimation/data.json";
@@ -79,7 +80,8 @@ const Revolution = ({ setTabValue }) => {
         style={{ marginTop: "5em" }}
       >
         <Grid item lg>
-          <img
+          <LazyLoadImage
+            threshold={400}
             src="/assets/vision.svg"
             alt="mountain through binoculars"
             style={{
@@ -324,7 +326,8 @@ const Revolution = ({ setTabValue }) => {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img
+          <LazyLoadImage
+            threshold={250}
             src="/assets/consultationIcon.svg"
             alt="handshake"
             width="100%"
@@ -389,7 +392,8 @@ const Revolution = ({ setTabValue }) => {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img
+          <LazyLoadImage
+            threshold={250}
             src="/assets/mockupIcon.svg"
             alt="basic website design outline"
             width="100%"
@@ -455,7 +459,8 @@ const Revolution = ({ setTabValue }) => {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img
+          <LazyLoadImage
+            threshold={250}
             src="/assets/reviewIcon.svg"
             alt="magnifying glass"
             width="100%"
@@ -512,7 +517,8 @@ const Revolution = ({ setTabValue }) => {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img
+          <LazyLoadImage
+            threshold={250}
             src="/assets/designIcon.svg"
             alt="paint brush"
             width="100%"
@@ -568,7 +574,8 @@ const Revolution = ({ setTabValue }) => {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img
+          <LazyLoadImage
+            threshold={250}
             src="/assets/reviewIcon.svg"
             alt="magnifying glass"
             width="100%"
@@ -665,7 +672,8 @@ const Revolution = ({ setTabValue }) => {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img
+          <LazyLoadImage
+            threshold={250}
             src="/assets/buildIcon.svg"
             alt="construction site"
             width="100%"
@@ -734,7 +742,8 @@ const Revolution = ({ setTabValue }) => {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img
+          <LazyLoadImage
+            threshold={250}
             src="/assets/launchIcon.svg"
             alt="space shuttle"
             width="100%"
@@ -799,7 +808,8 @@ const Revolution = ({ setTabValue }) => {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img
+          <LazyLoadImage
+            threshold={250}
             src="/assets/maintainIcon.svg"
             alt="spanner"
             width="100%"
@@ -866,7 +876,12 @@ const Revolution = ({ setTabValue }) => {
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
-          <img src="/assets/iterateIcon.svg" alt="dominoes" width="100%" />
+          <LazyLoadImage
+            threshold={250}
+            src="/assets/iterateIcon.svg"
+            alt="dominoes"
+            width="100%"
+          />
         </Grid>
       </Grid>
       <Grid item>
