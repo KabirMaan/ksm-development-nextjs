@@ -8,6 +8,7 @@ https://ksm-development-nextjs.now.sh/
 <p>A fully responsive website for the software development company KSM Development. SEO optimised and conversions tracked using Google Analytics</p>
 
 <h3>What technologies are used?</h3>
+
 <p>React, Next, Firebase, MaterialUI</p>
 
 <h3>How to run it</h3>
@@ -19,6 +20,7 @@ npm install
 # Run the client
 npm run dev
 
+```
 
 <h3>How to use it</h3>
 
