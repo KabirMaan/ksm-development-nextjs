@@ -9,7 +9,7 @@
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "@material-ui/styles": "latest",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "clsx": "latest",
     "fontfaceobserver": "^2.1.0",
     "fs-extra": "^9.0.1",
